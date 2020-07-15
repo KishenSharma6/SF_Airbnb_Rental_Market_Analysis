@@ -6,3 +6,6 @@ __pycache__
 
 #Ignore checkpoints
 *ipynb_checkpoints
+
+#Ignore Data file
+Data/
