@@ -9,3 +9,6 @@ __pycache__
 
 #Ignore Data file
 Data/
+
+#Ignore model
+*pkl
