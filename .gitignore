@@ -1,2 +1,8 @@
 #Ignore todo list
 TO-DO.txt
+
+#Ignore pycache files
+__pycache__
+
+#Ignore checkpoints
+*ipynb_checkpoints
