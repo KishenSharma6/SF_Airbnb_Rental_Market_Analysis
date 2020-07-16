@@ -68,6 +68,7 @@ def prediction_fit_eval(prediction_error_df, figsize = (14,7), bins = 50, model_
     ax[0].set_title('Prediction Error Distribution',fontstyle = 'italic', fontsize=16,)
     ax[0].set_xlabel('Error',fontsize = 12)
     ax[0].get_xaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "${:}".format(int(x))))
+    ax[0].set_ylabel('Count',fontsize = 12)
     ax[0].get_yaxis().set_major_formatter(plt.FuncFormatter(lambda x, loc: "{:,}".format(int(x))))
     
     #Prediction vs fit plot
