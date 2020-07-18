@@ -15,15 +15,16 @@ def regression_metrics(name,y_hat, y,return_dict = True):
         - return_dict: flag if you would like metrics returned as a dictionary
     """
     mae = mean_absolute_error(y, y_hat)
+    mape = np.mean(np.abs((y - y_hat) / y)) * 100
     mse = np.mean(np.square((y - y_hat)))
     rmse = np.sqrt(mse)
     r2 = r2_score(y, y_hat)
     print('{} Evaluation Metrics:'.format(name))
-    print('R2: {}\nMAE: {} \nMSE: {}\nRMSE: {}'.format(r2,mae,mse,rmse))
+    print('R2: {}\nMAE: {} \nMAPE: {}\nMSE: {}\nRMSE: {}'.format(r2,mae,mape,mse,rmse))
     print('==================================================')
     if return_dict == True:
         metrics_dict = {}
-        for metric in ('r2','mae','mse','rmse'):
+        for metric in ('r2','mae','mape','mse','rmse'):
             metrics_dict[metric] = locals()[metric]
         return metrics_dict
 
