@@ -12,3 +12,6 @@ Data/
 
 #Ignore model
 *pkl
+
+#Ignore venv
+venv/
